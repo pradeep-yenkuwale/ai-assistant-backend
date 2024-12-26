@@ -1,0 +1,313 @@
+[
+    {
+        "tripSuggestions": [
+            {
+                "country": "United Arab Emirates",
+                "cities": [ "Dubai", "Abu Dhabi", "Ras Al Khaimah", "Sharjah", "Fujairah Fort" ],
+                "places": [
+                    {
+                        "name": "Burj Khalifa",
+                        "seasons": [
+                            "Winter"
+                        ],
+                        "pricing": {
+                            "amount": "AED 769 per person"
+                        },
+                        "timings": {
+                            "allowed": "24 hours every day",
+                            "limit": "Top lounge daily between 09:00 AM to 11:00 PM"
+                        },
+                        "city": "dubai"
+                    },
+                    {
+                        "name": "Ferrari World",
+                        "seasons": [
+                            "Winter"
+                        ],
+                        "pricing": {
+                            "amount": "AED 444 per person"
+                        },
+                        "timings": {
+                            "allowed": "Day Trip"
+                        },
+                        "city": "Abu Dhabi"
+                    },
+                    {
+                        "name": "Desert Safari with BBQ, Camel Ride & Sandboarding",
+                        "seasons": [
+                            "Winter"
+                        ],
+                        "pricing": {
+                            "amount": "AED 316 per person"
+                        },
+                        "timings": {
+                            "allowed": "Day Trip"
+                        },
+                        "city": "Abu Dhabi"
+                    }
+                ],
+                "nearbyHotels": [
+                    {
+                        "name": "Armani Hotel Dubai, Burj Khalifa",
+                        "address": "Burj Khalifa, Mohamed Bin Rashid Boulevard, Downtown Dubai, Dubai, United Arab Emirates, Downtown Dubai, Dubai, United Arab Emirates, 888333",
+                        "rooms": [
+                            {
+                                "rooType": "Armani Premiere Room",
+                                "startingPrice": {
+                                    "value": 2611,
+                                    "currency": "DHS"
+                                },
+                                "inclusions": {
+                                    "breakfast": "DHS 175 per person",
+                                    "cancellation": "Hotel policy",
+                                    "others": [
+                                        "Free Wifi",
+                                        "Express check-in"
+                                    ],
+                                    "payType": "Pay at property"
+                                },
+                                "roomDetails": {
+                                    "bedType": "1 king bed",
+                                    "roomSize": "70 m²/753 ft²",
+                                    "view": "City view",
+                                    "others": [
+                                        "Separate shower/bathtub",
+                                        "Non-smoking",
+                                        "Private pool"
+                                    ],
+                                    "capacity": "2 guests"
+                                }
+                            },
+                            {
+                                "type": "Armani Premiere Suite",
+                                "startingPrice": {
+                                    "value": 3000,
+                                    "currency": "DHS"
+                                },
+                                "inclusions": {
+                                    "breakfast": "Included",
+                                    "cancellation": "Free Cancellation",
+                                    "others": [
+                                        "Free Wifi",
+                                        "Express check-in"
+                                    ],
+                                    "payType": "Pay at property"
+                                },
+                                "roomDetails": {
+                                    "bedType": "1 king bed",
+                                    "roomSize": "70 m²/753 ft²",
+                                    "view": "Lake view",
+                                    "others": [
+                                        "Separate shower/bathtub",
+                                        "Non-smoking",
+                                        "Private pool"
+                                    ],
+                                    "capacity": "2 guests"
+                                }
+                            },
+                            {
+                                "type": "Armani Fountain Suite",
+                                "startingPrice": {
+                                    "value": 3417,
+                                    "currency": "DHS"
+                                },
+                                "inclusions": {
+                                    "breakfast": "Included",
+                                    "cancellation": "Free Cancellation",
+                                    "others": [
+                                        "Free Wifi",
+                                        "Express check-in"
+                                    ],
+                                    "payType": "Pay at property"
+                                },
+                                "roomDetails": {
+                                    "bedType": "1 king bed",
+                                    "view": "Garden view",
+                                    "others": [
+                                        "Shower and bathtub",
+                                        "Non-smoking",
+                                        "Private pool"
+                                    ],
+                                    "capacity": "2 guests"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Hyatt Centric Jumeirah Dubai",
+                        "address": "La Mer North - Jumeirah - Jumeirah 1 - Dubai - United Arab Emirates",
+                        "rooms": [
+                            {
+                                "rooType": "1 King Bed with Sea View with Balcony",
+                                "startingPrice": {
+                                    "value": "1275",
+                                    "currency": "AED"
+                                },
+                                "inclusions": {
+                                    "breakfast": "DHS 175 per person",
+                                    "cancellation": "Hotel policy",
+                                    "others": [
+                                        "Free Wifi",
+                                        "Express check-in"
+                                    ],
+                                    "payType": "Pay at property"
+                                },
+                                "roomDetails": {
+                                    "bedType": "1 king bed",
+                                    "roomSize": "70 m²/753 ft²",
+                                    "view": "City view",
+                                    "others": [
+                                        "Separate shower/bathtub",
+                                        "Smoking and Non-smoking",
+                                        "Private pool",
+                                        "Private balcony"
+                                    ],
+                                    "capacity": "2 guests"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "seasons": ["Winter", "Spring", "Summer"]
+            }
+        ],
+        "customerInterests": [
+            {
+                "name": "Pradeep Yenkuwale",
+                "prefferedDestinations": [
+                    "Dubai",
+                    "Abu Dhabi",
+                    "Khor Fakkan"
+                ],
+                "prefferedSeasons": [
+                    "winter",
+                    "summer"
+                ],
+                "preferredAccommodation": [
+                    {
+                        "name": "Taj Jumeirah Lakes Towers",
+                        "globalRating": "9 out of 10",
+                        "customerRated": "10 out of 10",
+                        "address": "DMCC Plot No. 2-27, Al Thanyah, Jumeirah Lakes Towers PO Box 120810, Dubai, Jumeirah Lakes Towers, Dubai"
+                    }
+                ]
+            },
+            {
+                "name": "Muneer Sayyad",
+                "prefferedDestinations": [
+                    "Dubai",
+                    "Abu Dhabi"
+                ],
+                "prefferedSeasons": [
+                    "winter",
+                    "summer"
+                ],
+                "preferredAccommodation": [
+                    {
+                        "type": "hotel",
+                        "name": "Taj Jumeirah Lakes TowersOpens in new window",
+                        "globalRating": "9 out of 10",
+                        "customerRated": "10 out of 10",
+                        "address": "DMCC Plot No. 2-27, Al Thanyah, Jumeirah Lakes Towers PO Box 120810, Dubai, Jumeirah Lakes Towers, Dubai"
+                    }
+                ]
+            }
+        ],
+        "futureFlightBookings": [
+            {
+                "bookingDetails": {
+                    "almatarBookingId": 5600423,
+                    "PNR": "RT284R",
+                    "status": "Issued",
+                    "paymentStatus": "Paid",
+                    "bookingDate": "24-10-2024",
+                    "bookingTime": "10:40 PM",
+                    "departureDate": "19-12-2024",
+                    "departureTime": "09:50 PM",
+                    "arrivalDate": "24-12-2024",
+                    "arrivalTime": "02:50 AM"
+                },
+                "journeyDetails": {
+                    "tripDirection": "OneWay",
+                    "duration": "4 Hours",
+                    "numberOfStops": 0
+                },
+                "flightDetails": {
+                    "airline": "Flyadeal",
+                    "airlineCode": "F8",
+                    "ratings": {
+                        "globalRating": "8 out of 10",
+                        "almatarRating": "9 out of 10",
+                        "totalCustomersRatedOnAlmatar": 800,
+                        "numberOfCustomersBooked": 1200
+                    }
+                },
+                "routeDetails": {
+                    "departureRoute": "RUH",
+                    "arrivalRoute": "JED"
+                },
+                "airportDetails": {
+                    "departureAirportDetails": {
+                        "airportName": "King Khalid International Airport",
+                        "airportCode": "RUH",
+                        "airportCity": "Riyadh",
+                        "airportCountry": "Saudi Arabia"
+                    },
+                    "arrivalAirportDetails": {
+                        "airportName": "King Abdulaziz International Airport",
+                        "airportCode": "JED",
+                        "airportCity": "Jeddah",
+                        "airportCountry": "Saudi Arabia"
+                    }
+                }
+            },
+            {
+                "bookingDetails": {
+                    "almatarBookingId": 5624340,
+                    "PNR": "RT3768R",
+                    "status": "Failed",
+                    "paymentStatus": "Payment Pending",
+                    "bookingDate": "08-12-2024",
+                    "bookingTime": "11:40 PM",
+                    "departureDate": "25-12-2024",
+                    "departureTime": "09:50 PM",
+                    "arrivalDate": "29-12-2024",
+                    "arrivalTime": "02:50 AM"
+                },
+                "journeyDetails": {
+                    "tripDirection": "OneWay",
+                    "duration": "3 Hours",
+                    "numberOfStops": 0
+                },
+                "flightDetails": {
+                    "airline": "Flynas",
+                    "airlineCode": "ES8",
+                    "ratings": {
+                        "globalRating": "7 out of 10",
+                        "almatarRating": "9 out of 10",
+                        "totalCustomersRatedOnAlmatar": 800,
+                        "numberOfCustomersBooked": 1200
+                    }
+                },
+                "routeDetails": {
+                    "departureRoute": "RUH",
+                    "arrivalRoute": "JED"
+                },
+                "airportDetails": {
+                    "departureAirportDetails": {
+                        "airportName": "King Khalid International Airport",
+                        "airportCode": "RUH",
+                        "airportCity": "Riyadh",
+                        "airportCountry": "Saudi Arabia"
+                    },
+                    "arrivalAirportDetails": {
+                        "airportName": "King Abdulaziz International Airport",
+                        "airportCode": "JED",
+                        "airportCity": "Jeddah",
+                        "airportCountry": "Saudi Arabia"
+                    }
+                }
+            }
+        ]
+    }
+]

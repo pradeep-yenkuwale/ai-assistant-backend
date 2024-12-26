@@ -1,0 +1,1 @@
+LANGUAGE_NOT_SELECTED = "It seems there’s an issue with the language setup. Could you please select your desired language? This will help me provide you with the most appropriate responses."

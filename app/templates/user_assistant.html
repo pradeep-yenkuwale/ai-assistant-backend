@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', path='/dialog.css') }}" type="text/css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', path='script.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', path='stream.js') }}" crossorigin="anonymous"></script>
+    <style>
+      #gif {
+        /* display: none; Hide GIF initially */
+        max-width: 300px;
+        max-height: 300px;
+      }
+      #pause-play {
+        max-width: 300px;
+        max-height: 300px;
+      }
+      
+    </style>
+  </head>
+  <body onload="onPageLoad()">
+    <div style="overflow: auto;">
+      <div id="chatbot-container">
+        <div id="chatbot-header">
+          <!-- Chatbot Title -->
+          <div id="chatbot-title">
+            <h2>Advisor</h2>
+          </div>
+        
+          <!-- Language Switcher -->
+          <div id="language-switcher">
+            <label class="switch">
+              <input type="checkbox" id="language-toggle" onchange="toggleLanguage()">
+              <span class="slider"></span>
+            </label>
+            <span id="toggle-label">English</span>
+          </div>
+        
+          <!-- Mode Switcher -->
+          <div id="mode-switcher">
+            <button id="text-mode" class="active">
+              <i class="fas fa-comment"></i>
+            </button>
+            <button id="voice-mode">
+              <i class="fa fa-headphones" aria-hidden="true"></i>
+            </button>
+          </div>
+        
+          <!-- Help and Close Icons -->
+          <div id="header-actions">
+            <button id="help-icon">
+              <i class="fas fa-question"  onclick="openDialog()"></i>
+            </button>
+            <button id="close-icon">
+              <i class="fas fa-times" onclick="toggleChatbot()"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="header-buttons">
+          <button onclick="selectButton(this)" id="trip-suggestions" value="trip-suggestions">Trip suggastions</button>
+          <button onclick="selectButton(this)" id="people-interests" value="people-interests">People interests</button>
+          <button onclick="selectButton(this)" id="future-bookings"  value="future-bookings">Future bookigs</button>
+        </div>
+        <div id="input-section">
+          <div id="text-input" class="mode">
+            <div id="chatbot-messages"></div>
+            <div id="chat-input">
+              <textarea id="user-input" placeholder="Type a message..." onkeypress="submitEnter(event)"></textarea>
+              <button id="send-btn" class="send-btn" onclick="sendMessage()">Send</button>
+              <button id="send-btn" class="send-btn">
+                <div id="start-recording-icon-btn">
+                  <img src="static/media/mic_icon.png" alt="Start Recording" id="start-recording-btn" />
+                </div>
+                <div id="stop-recording-icon-btn" class="hidden">
+                  <img src="static/media/stop_icon.png" alt="Stop Recording" id="stop-recording-btn" />
+                </div>  
+              </button>
+            </div>
+          </div>
+          <div id="voice-input" class="mode hidden">
+            <div id="voice-container">
+              <audio id="audio-player"></audio>
+              <button id="play-button" class="hidden"><i id="play-icon" class="fas fa-play"></i></button>
+              <button id="pause-button" class="hidden"><i id="pause-icon" class="fas fa-pause"></i></button>
+              <button id="stop-button" class="hidden"><i id="stop-icon" class="fas fa-stop"></i></button>
+          </div>
+            <div id="recording-controls">
+              <div id="start-recording-icon">
+                <img src="static/media/mic_icon.png" alt="Start Recording" id="start-recording" />
+              </div>
+              <div id="stop-recording-icon" class="hidden">
+                <img src="static/media/stop_icon.png" alt="Stop Recording" id="stop-recording" />
+              </div>    
+              <div id="playing-audio" class="hidden">
+                <img id="gif" src="static/media/playing.gif" alt="Playing Animation">
+              </div>
+              <div id="pause-audio" class="hidden">
+                <img id="pause-play" src="static/media/playing.png" alt="Playing Animation">
+              </div>
+              <div id="loading-audio" class="hidden">
+                <img id="gif" src="static/media/playing.gif" alt="Playing Animation">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="open-chatbot" onclick="toggleChatbot()">Hey, I am here!🙋‍♂️</button>
+      <div id="dialogOverlay">
+        <div id="dialogBox">
+          <div class="dialog-header">
+            <h3 class="header-title" id="header-title">Raise a Concern</h3>
+          </div>
+          <div class="dialog-body">
+            <div class="row" style="text-align: center;">
+              <h4 id="successMessage" style="color: green;"></h4>
+              <h4 id="erroreMessage" style="color: red;"></h4>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="titleInput" id="titleInputLabel">Title:</label>
+                <input type="text" id="titleInput" placeholder="Enter title" />
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-md-12">
+                <label for="detailsInput" id="detailsInputLabel">Details:</label>
+                <textarea id="detailsInput" placeholder="Describe your query"></textarea>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-md-2">
+                <button class="dialog-button align-right" id="close-button" onclick="closeDialog()">Close</button>
+              </div>
+              <div class="col-md-10">
+                <button class="dialog-button align-right" id="create-button" onclick="createTicket()">Raise</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
